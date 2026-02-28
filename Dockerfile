@@ -8,7 +8,7 @@ WORKDIR /app
 # Copy dependency manifests first (layer cache)
 COPY package.json package-lock.json* ./
 
-RUN npm ci --frozen-lockfile
+RUN npm install
 
 # Copy source and build
 COPY . .
